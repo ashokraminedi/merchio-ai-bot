@@ -38,7 +38,7 @@ AI-powered chatbot for e-commerce platforms. Built with Spring Boot, PostgreSQL,
 
 ### 1. Clone the Repository
 ```bash
-git clone https://github.com/ashokraminedi/merchio.git
+git clone https://github.com/your_profile/merchio.git
 cd merchio
 ```
 
