@@ -1,0 +1,42 @@
+spring:
+  application:
+    name: merchio
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/merchio_db
+    username: postgres
+    password: ${POSTGRES_PASSWORD:postgres}
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        format_sql: true
+
+server:
+  port: 8080
+
+# AI Configuration
+ai:
+  provider: openai  # Options: openai, claude, azure
+  openai:
+    api-key: ${OPENAI_API_KEY}
+    model: gpt-4-turbo-preview
+    max-tokens: 1000
+  claude:
+    api-key: ${CLAUDE_API_KEY}
+    model: claude-sonnet-4-5-20250929
+  azure:
+    api-key: ${AZURE_API_KEY}
+    endpoint: ${AZURE_ENDPOINT}
+
+# Merchio Configuration
+merchio:
+  chatbot:
+    rules-file: classpath:chatbot-rules.json
+    max-history: 10
+    version: 0.0.1

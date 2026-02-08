@@ -1,0 +1,9 @@
+  __  __               _     _
+ |  \/  | ___ _ __ ___| |__ (_) ___
+ | |\/| |/ _ \ '__/ __| '_ \| |/ _ \
+ | |  | |  __/ | | (__| | | | | (_) |
+ |_|  |_|\___|_|  \___|_| |_|_|\___/
+
+ :: Your Intelligent Shopping Companion ::
+ :: Version 0.0.1 ::
+ :: Spring Boot ${spring-boot.version} ::

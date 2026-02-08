@@ -1,0 +1,73 @@
+{
+  "intentRules": [
+    {
+      "intent": "ORDER_STATUS",
+      "keywords": ["order", "status", "track", "tracking", "where is my order", "delivery", "shipped"],
+      "requiredEntities": ["orderNumber"],
+      "description": "Customer wants to check order status",
+      "examples": [
+        "What's the status of my order #ORD001ABC?",
+        "Track my order",
+        "Where is my delivery?"
+      ]
+    },
+    {
+      "intent": "PRODUCT_SEARCH",
+      "keywords": ["search", "find", "looking for", "product", "item", "buy", "show me"],
+      "requiredEntities": ["productName"],
+      "description": "Customer wants to search for products",
+      "examples": [
+        "Do you have laptops?",
+        "Search for wireless headphones",
+        "I'm looking for a phone"
+      ]
+    },
+    {
+      "intent": "CATALOG_AVAILABILITY",
+      "keywords": ["available", "in stock", "availability", "stock", "out of stock", "inventory"],
+      "requiredEntities": ["productName"],
+      "description": "Customer wants to check product availability",
+      "examples": [
+        "Is iPhone 15 available?",
+        "Do you have MacBook in stock?",
+        "Check availability of AirPods"
+      ]
+    },
+    {
+      "intent": "PAYMENT_INQUIRY",
+      "keywords": ["payment", "pay", "refund", "charge", "transaction", "paid", "billing"],
+      "requiredEntities": [],
+      "description": "Customer has payment-related questions",
+      "examples": [
+        "When will I be charged?",
+        "How do I get a refund?",
+        "What payment methods do you accept?"
+      ]
+    },
+    {
+      "intent": "GENERAL_INQUIRY",
+      "keywords": [],
+      "requiredEntities": [],
+      "description": "General questions or greetings",
+      "examples": [
+        "Hello",
+        "How can you help me?",
+        "What is Merchio?"
+      ]
+    }
+  ],
+  "validationRules": {
+    "orderNumberPattern": "^[A-Z0-9]{6,12}$",
+    "emailPattern": "^[A-Za-z0-9+_.-]+@(.+)$",
+    "maxPromptLength": 500,
+    "minPromptLength": 2
+  },
+  "responseTemplates": {
+    "ORDER_STATUS": "I found your order {orderNumber}. Current status: {status}. {additionalInfo}",
+    "PRODUCT_FOUND": "I found {count} products matching your search: {products}",
+    "PRODUCT_NOT_FOUND": "I couldn't find any products matching '{query}'. Would you like me to suggest alternatives?",
+    "AVAILABILITY_IN_STOCK": "Yes, {productName} is currently in stock. We have {quantity} units available.",
+    "AVAILABILITY_OUT_OF_STOCK": "Sorry, {productName} is currently out of stock. Would you like to be notified when it's available?",
+    "MISSING_INFO": "I need more information. Could you provide {missingEntity}?"
+  }
+}
