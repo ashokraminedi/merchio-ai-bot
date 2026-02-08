@@ -1,11 +1,14 @@
-
 # Merchio 🛍️
 
 > Your Intelligent Shopping Companion
 
 [![Java](https://img.shields.io/badge/Java-21-orange.svg)](https://openjdk.org/)
 [![Spring Boot](https://img.shields.io/badge/Spring%20Boot-3.2-brightgreen.svg)](https://spring.io/projects/spring-boot)
+<<<<<<< HEAD
 
+=======
+[![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+>>>>>>> 113a92d (initial commit : Merchio - AI powered commerce assistant)
 
 AI-powered chatbot for e-commerce platforms. Built with Spring Boot, PostgreSQL, and integrated with multiple AI providers (OpenAI, Claude, Azure).
 
@@ -40,7 +43,7 @@ AI-powered chatbot for e-commerce platforms. Built with Spring Boot, PostgreSQL,
 
 ### 1. Clone the Repository
 ```bash
-git clone https://github.com/ashokraminedi/merchio.git
+git clone https://github.com/yourprofile/merchio.git
 cd merchio
 ```
 
@@ -184,4 +187,3 @@ merchio/
 - Spring Boot Team
 - OpenAI & Anthropic for AI APIs
 - All contributors
-
