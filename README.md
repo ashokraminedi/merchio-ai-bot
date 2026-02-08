@@ -1,6 +1,4 @@
-<<<<<<< HEAD
 
-=======
 # Merchio 🛍️
 
 > Your Intelligent Shopping Companion
